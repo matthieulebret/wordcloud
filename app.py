@@ -22,7 +22,7 @@ st.title('Word cloud generator app')
 text = st.text_area(label = 'Text input area',value='Input text here',height=300)
 
 if text is not None:
-    output = sc.gen_stylecloud(text,output_name='output.png',background_color='black',icon_name = 'fas fa-chart-pie')
+    output = sc.gen_stylecloud(text,output_name='output.png',background_color='black',icon_name = 'fas fa-brain')
     st.header('The word cloud from the text is:')
     st.image('output.png')
 else:
