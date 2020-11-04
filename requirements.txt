@@ -1,0 +1,14 @@
+pandas==1.0.5
+numpy==1.19.1
+plotly==4.9.0
+requests==2.24.0
+stylecloud==0.5.1
+matplotlib==3.3.0
+textblob==0.15.3
+newsapi_python==0.2.6
+altair==4.1.0
+streamlit==0.70.0
+wordcloud==1.7.0
+beautifulsoup4==4.9.3
+newsapi==0.1.1
+Pillow==8.0.1
