@@ -55,4 +55,4 @@ if wiki is not None:
         st.subheader('The word cloud from the Wiki search is:')
         st.image('wiki.png')
     with col2:
-        st.write(wiki)
+        st.write(wikipedia.summary(wiki))
