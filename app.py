@@ -49,7 +49,7 @@ st.header('Word cloud from Wikipedia summary')
 wiki = st.text_input(label='Search Wikipedia',value = 'LinkedIn')
 
 if wiki is not None:
-    col1,col2 = st.beta_columns(2,1,2)
+    col1,col2 = st.beta_columns(2,1)
     with col1:
         sc.gen_stylecloud(text=wikipedia.summary(wiki),output_name='wiki.png',background_color='black')
         st.subheader('The word cloud from the Wiki search is:')
