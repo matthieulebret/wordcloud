@@ -21,14 +21,12 @@ import textblob
 
 from textblob import TextBlob
 
-from nltk.corpus import stopwords
-
 from textblob import TextBlob
 from textblob.sentiments import NaiveBayesAnalyzer
 
 st.set_page_config('Word cloud app',layout='wide')
 
-st.title('Word cloud generator app')
+st.title('Word cloud and sentiment analysis app')
 
 
 col1, col2, col3 = st.beta_columns(3)
@@ -43,7 +41,6 @@ with col3:
 
 st.header('Word cloud from text')
 
-stop_words = stopwords.words('english')
 col1,col2 = st.beta_columns(2)
 
 with col1:
@@ -51,7 +48,7 @@ with col1:
     text = st.text_area(label = ' ',value='This is really a great wonderful place',height=435)
 with col2:
     if text is not None:
-        output = sc.gen_stylecloud(text,output_name='output.png',background_color='black',icon_name = 'fas fa-brain',stopwords=stop_words)
+        output = sc.gen_stylecloud(text,output_name='output.png',background_color='black',icon_name = 'fas fa-brain')
         st.subheader('The word cloud from the text is:')
         st.image('output.png',use_column_width=True)
     else:
@@ -94,6 +91,6 @@ with col1:
         st.write(wikipedia.page(wiki).content)
 with col2:
     if wiki is not None:
-        sc.gen_stylecloud(text=wikipedia.page(wiki).content,output_name='wiki.png',background_color='black',stopwords=stop_words)
+        sc.gen_stylecloud(text=wikipedia.page(wiki).content,output_name='wiki.png',background_color='black')
         st.subheader('The word cloud from the Wiki search is:')
         st.image('wiki.png')
